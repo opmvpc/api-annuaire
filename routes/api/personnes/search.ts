@@ -16,13 +16,7 @@ export default defineEventHandler(async (event) => {
 
   const options = {
     includeScore: true,
-    keys: [
-      'prenom',
-      'nom',
-      'numero_de_telephone',
-      'adresse_email',
-      'description',
-    ],
+    keys: ['prenom', 'nom', 'description'],
   };
 
   const fuse = new Fuse(personnes, options);
