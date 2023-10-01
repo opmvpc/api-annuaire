@@ -27,11 +27,11 @@ export default defineEventHandler(async (event) => {
 
   const fuse = new Fuse(personnes, options);
 
-  const result = fuse.search(q);
+  const results = fuse.search(q);
 
-  if (!result) {
+  if (!results) {
     return new Error('Error while searching for results');
   }
 
-  return result;
+  return results.map((result) => result.item);
 });
