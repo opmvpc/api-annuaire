@@ -1,4 +1,5 @@
 export default defineNitroConfig({
+  preset: 'vercel_edge',
   publicAssets: [
     {
       baseURL: 'img',
